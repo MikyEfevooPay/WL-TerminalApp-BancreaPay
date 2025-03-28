@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.Centumpay.demoui",
+  "applicationId": "com.CentralPay.demoui",
   "variantName": "debug",
   "elements": [
     {
