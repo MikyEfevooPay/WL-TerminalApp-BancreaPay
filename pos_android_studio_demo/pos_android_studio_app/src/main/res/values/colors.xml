@@ -255,8 +255,10 @@
 
     <!--  colores del menu  -->
     <color name="ep_btn_menu_texto">#001750</color>
-    <!--  colores de la mayoria de los textos y otros  -->
+    <!--  Color primario en textos, colores de la mayoria de los textos y otros  -->
     <color name="ep_set_monto">#004FE8</color>
+    <!--  Color secundario en textos, colores de la mayoria de los textos y otros  -->
+    <color name="secundary_color">#00B012</color>
     <!--  Color boton principal  -->
     <color name="ep_btn_continuar_fondo">#004FE8</color>
     <!--  Color boton secundario, mayormente es negro  -->
