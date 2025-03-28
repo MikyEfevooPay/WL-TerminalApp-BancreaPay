@@ -212,8 +212,6 @@
     <color name="ep_btn_cancelar_fondo">#FFBABA</color>
     <color name="ep_btn_cancelar_texto">#CC1818</color>
     <color name="ep_btn_menu_fondo">#FFFFFF</color>
-    <color name="ep_btn_menu_texto">#212859</color>
-    <color name="ep_btn_continuar_fondo">#386EB1</color>#
     <color name="ep_btn_continuar_texto">#FFF</color>
     <color name="ep_btn_confirmacion_fondo">#B9E0AB</color>
     <color name="ep_btn_confirmacion_texto">#84CE78</color>
@@ -251,8 +249,18 @@
 
     <!--  Text  -->
 
-    <color name="ep_set_monto">#386EB1</color>
+
     <color name="m_btn_stroke">#AFC5DF</color>
-    <color name="btn_black">#386EB1</color>
+
+
+    <!--  colores del menu  -->
+    <color name="ep_btn_menu_texto">#001750</color>
+    <!--  colores de la mayoria de los textos y otros  -->
+    <color name="ep_set_monto">#004FE8</color>
+    <!--  Color boton principal  -->
+    <color name="ep_btn_continuar_fondo">#004FE8</color>
+    <!--  Color boton secundario, mayormente es negro  -->
+    <color name="btn_black">#004FE8</color>
+
 
 </resources>
