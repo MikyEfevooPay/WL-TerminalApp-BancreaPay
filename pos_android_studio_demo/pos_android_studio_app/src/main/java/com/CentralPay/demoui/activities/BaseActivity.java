@@ -429,7 +429,7 @@ public abstract class BaseActivity extends AppCompatActivity implements ITicket,
     }
 
     public void setWhiteLogo() {
-        logo_image.setImageResource(R.drawable.logo_white);
+        logo_image.setImageResource(R.drawable.logo_centumpay);
     }
 
     public void setMarginLogo() {
