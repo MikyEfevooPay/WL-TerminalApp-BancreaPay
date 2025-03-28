@@ -49,7 +49,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="190px"
                 android:layout_height="53px"
-                app:srcCompat="@drawable/logo_centumpay_ticket" />
+                app:srcCompat="@drawable/logo_digitalticket" />
 
         </LinearLayout>
 
