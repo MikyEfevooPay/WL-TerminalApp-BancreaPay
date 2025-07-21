@@ -570,4 +570,18 @@ public class GNTBackEnd {
             return "";
         }
     }
+    public boolean getValidaTarjeta(String type_transaction,String tarjetainicio,String tarjetafinal)
+    {
+        if(type_transaction.equals("Cancelacion"))
+        {
+            if(tarjetainicio.equals(tarjetafinal))
+            {
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return  true;
+        }
+    }
 }
