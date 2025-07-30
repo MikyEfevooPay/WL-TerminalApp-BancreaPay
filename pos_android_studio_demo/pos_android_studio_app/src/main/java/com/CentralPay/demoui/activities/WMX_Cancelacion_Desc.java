@@ -148,10 +148,10 @@ public class WMX_Cancelacion_Desc extends BaseActivity  {
              transaction_type = 0;
         }
 
-        if (redtarj.equals("MC")){
+        if (redtarj.toUpperCase(Locale.ROOT).equals("MC")){
             card_provider = "MASTERCARD";
             cp_iv_process.setImageResource(R.drawable.masterdcard);
-        }else if(redtarj.equals("Visa")){
+        }else if(redtarj.toUpperCase(Locale.ROOT).equals("VISA")){
             cp_iv_process.setImageResource(R.drawable.visa);
         }else if(redtarj.toUpperCase(Locale.ROOT).equals("AMEX")){
             cp_iv_process.setImageResource(R.drawable.amex);
