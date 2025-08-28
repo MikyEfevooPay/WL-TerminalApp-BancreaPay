@@ -50,8 +50,8 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="315px"
-                android:layout_height="56.98px"
-                app:srcCompat="@drawable/logo_digitalticket" />
+                android:layout_height="66.98px"
+                app:srcCompat="@drawable/logo" />
 
         </LinearLayout>
 
@@ -264,7 +264,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="92px"
                 android:background="@drawable/rounded_corner"
-                android:backgroundTint="#000000"
+                android:backgroundTint="@color/ep_btn_continuar_fondo"
                 android:fontFamily="@font/dm_sans_bold"
                 android:minHeight="50dip"
                 android:stateListAnimator="@null"

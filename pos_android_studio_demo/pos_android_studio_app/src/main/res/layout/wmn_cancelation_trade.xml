@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:text="Cancelar"
+                android:textColor="@color/ep_set_monto"
                 android:textSize="15dp"/>
         </LinearLayout>
 

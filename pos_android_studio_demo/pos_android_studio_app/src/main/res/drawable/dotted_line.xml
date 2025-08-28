@@ -6,7 +6,7 @@
         android:dashGap="16px"
         android:dashWidth="26px"
         android:width="1px"
-        android:color="@color/ep_set_monto" />
+        android:color="@color/dotted_line" />
 
     <size android:height="2px" />
 

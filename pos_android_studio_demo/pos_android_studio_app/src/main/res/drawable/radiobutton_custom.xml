@@ -16,10 +16,10 @@
                     <corners
                         android:radius="5px"/>
 
-                    <solid android:color="@color/ep_set_monto" />
+                    <solid android:color="@color/radiu_color" />
 
                     <stroke android:width="1px"
-                        android:color="@color/ep_set_monto"
+                        android:color="@color/radiu_color"
                         />
 
                     <padding

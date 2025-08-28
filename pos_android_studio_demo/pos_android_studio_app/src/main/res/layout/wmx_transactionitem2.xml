@@ -15,7 +15,7 @@
     android:paddingBottom="14px">
 
     <LinearLayout
-        android:layout_width="201px"
+        android:layout_width="220px"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
 
                 android:text="Aut. No. "
-                android:textColor="#386EB1"
+                android:textColor="@color/btn_black"
                 android:textSize="16px" />
 
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_marginBottom="9px"
                 android:fontFamily="@font/dm_sans"
                 android:text="3884956"
-                android:textColor="#386EB1"
+                android:textColor="@color/btn_black"
                 android:textSize="16px" />
         </LinearLayout>
 
@@ -79,8 +79,8 @@
                     android:includeFontPadding="false"
                     android:text="$000,000.00"
 
-                    android:textColor="#4AAC38"
-                    android:textSize="20px" />
+                    android:textColor="#121212"
+                    android:textSize="15px" />
             </LinearLayout>
         </LinearLayout>
 
@@ -100,7 +100,7 @@
             android:layout_marginBottom="9px"
             android:fontFamily="@font/dm_sans"
             android:text="27/04/22"
-            android:textColor="#386EB1"
+            android:textColor="@color/btn_black"
             android:textSize="16px"
 
             />
@@ -148,7 +148,7 @@
             android:fontFamily="@font/dm_sans"
             android:text="11:11"
             android:textAlignment="viewEnd"
-            android:textColor="#386EB1"
+            android:textColor="@color/btn_black"
 
             android:textSize="16px" />
 
