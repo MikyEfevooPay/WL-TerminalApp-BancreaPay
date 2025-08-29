@@ -216,7 +216,7 @@
     <color name="ep_btn_confirmacion_fondo">#B9E0AB</color>
     <color name="ep_btn_confirmacion_texto">#84CE78</color>
     <color name="ep_btn_regresar_fondo">#E5E5E5</color>
-    <color name="ep_btn_regresar_texto">#004FE8</color>
+    <color name="ep_btn_regresar_texto">#0083BE</color>
     <color name="ep_btn_padTerminal_fondo">#E5E5E5</color>
     <color name="ep_btn_padTerminal_texto">#121212</color>
 
@@ -225,7 +225,7 @@
 
     <!--  Color  -->
     <color name="ep_color_black">#121212</color>
-    <color name="ep_color_blue">#2476E4</color>
+    <color name="ep_color_blue">#009ADF</color>
 
     <!--  Radio button  -->
     <color name="ep_rb_bg">#F0F0F0</color>
@@ -256,15 +256,15 @@
     <!--  colores del menu  -->
     <color name="ep_btn_menu_texto">#353535</color>
     <!--  Color primario en textos, colores de la mayoria de los textos y otros  -->
-    <color name="ep_set_monto">#2476E4</color>
+    <color name="ep_set_monto">#0083BE</color>
     <!--  Color secundario en textos, colores de la mayoria de los textos y otros  -->
-    <color name="secundary_color">#2476E4</color>
+    <color name="secundary_color">#009ADF</color>
     <!--  Color boton principal  -->
-    <color name="ep_btn_continuar_fondo">#2476E4</color>
+    <color name="ep_btn_continuar_fondo">#0083BE</color>
     <!--  Color boton secundario, mayormente es negro  -->
     <color name="btn_black">#262625</color>
 
-    <color name="radiu_color">#262625</color>
+    <color name="radiu_color">#009ADF</color>
 
     <color name="line_email">#55ADB0</color>
 
