@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.VaultPay.demoui",
+  "applicationId": "com.BancreaPay.demoui",
   "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 298,
-      "versionName": "1.5.9.13",
+      "versionCode": 301,
+      "versionName": "1.5.9.16",
       "outputFile": "pos_android_studio_app-debug.apk"
     }
   ],
