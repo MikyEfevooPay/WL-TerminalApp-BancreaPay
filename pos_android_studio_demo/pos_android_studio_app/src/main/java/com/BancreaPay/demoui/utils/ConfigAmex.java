@@ -275,6 +275,7 @@ public class ConfigAmex {
 
         } catch (JSONException e) {
             bndamex[0] =Boolean.FALSE;;
+            CallBack.onError("");
         }
     }
     public void initactivaamex(String ksn_posId) {
