@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -21,9 +22,9 @@ import java.util.regex.Pattern;
 
 public class Utils {
 	//BASE DE DATOS
-	public static final String TERMINAL_WL_Name = "wl_bancreapay";
+	public static final String TERMINAL_WL_Name = "wl_lupay";
 	//BUCKET CORREO
-	public static final String TERMINAL_WL_Bucket = "bancreapay";
+	public static final String TERMINAL_WL_Bucket = "lupay";
 	//PRODUCCION
 	public static final String TERMINAL_API = "https://efevoopayloadbalancer-ecommerce.com";
 	public static final String TERMINAL_BIN = "https://alphawlapi.efevoopaylbda.com/api/apiv0/agrs/terminales/tpv/bines";
@@ -31,6 +32,7 @@ public class Utils {
 	public static final String TERMINAL_AMEX = "https://efevoopayamex-ecommerce.com";
 	public static final String TERMINAL_BATCH = "https://efevoopaybatch-ecommerce.com";
 	public static final String TPVCONFIGAMEX = "https://api-ca.efevoopaylbda.com";
+	public static final String TERMINAL_REGISTROBUCKET="https://efevoopaybatch-ecommerce.com/api/tpv/log";
 	// TEST
 //	public static final String TERMINAL_API = "https://test-efevoopayloadbalancer-ecommerce.com";
 //	public static final String TERMINAL_BIN = "https://alphawlapitest.efevoopaylbda.com/api/apiv0/agrs/terminales/tpv/bines";
@@ -177,17 +179,17 @@ public class Utils {
 	}
 
 	public static Bitmap viewToBitmap(View view) {
-		int measuredWidth = View.MeasureSpec.makeMeasureSpec(384, View.MeasureSpec.EXACTLY);
-		int measuredHeight = View.MeasureSpec.makeMeasureSpec(100000, View.MeasureSpec.UNSPECIFIED);
-		view.measure(measuredWidth, measuredHeight);
+		int width = 384;
+		int widthSpec = View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY);
+		int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+		view.measure(widthSpec, heightSpec);
 		view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
-		int w = view.getWidth();
-		int h = view.getHeight();
+		int w = view.getMeasuredWidth();
+		int h = view.getMeasuredHeight();
 		Bitmap bmp = Bitmap.createBitmap(w, h, Bitmap.Config.RGB_565);
-		Canvas c = new Canvas(bmp);
-		c.drawColor(-1);
-		view.invalidate();
-		view.draw(c);
+		Canvas canvas = new Canvas(bmp);
+		canvas.drawColor(Color.WHITE);
+		view.draw(canvas);
 		return bmp;
 	}
 

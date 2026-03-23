@@ -374,7 +374,7 @@ public class PaintActivity extends BaseActivity implements View.OnClickListener,
 
     private void initSaveProgressDlg() {
         mSaveProgressDlg = new ProgressDialog(this);
-        mSaveProgressDlg.setMessage("Saving, please wait..");
+        mSaveProgressDlg.setMessage("Guardando, por favor espere..");
         mSaveProgressDlg.setCancelable(false);
     }
 
