@@ -42,7 +42,7 @@ import java.util.Locale;
 public class WMX_Cancelacion_Desc extends BaseActivity  {
     TextView cp_tv_trans_type,cp_tv_auth,cp_tv_amount,cp_tv_tip,cp_tv_total,cp_tv_card,cp_tv_date_time,cp_tv_approve,cp_tv_tip_label,cp_tv_total_label,cp_tv_tipotarjeta,cp_tv_aid,cp_tv_arqc,tp_tv_amount;
     ImageView cp_iv_trans_type,cp_iv_process;
-    LinearLayout cp_ll_content_card,ll_msi;
+    LinearLayout cp_ll_content_card,ll_msi,cp_tv_tip_ll;
     AppCompatButton cp_btn_trans_cancelar, cp_btn_trans_final;
     Context mContext;
     private String card_provider, tipotarjeta,tarjeta, datetime,card,redtarj,_approve,emisor,nip,entrada;
@@ -69,6 +69,13 @@ public class WMX_Cancelacion_Desc extends BaseActivity  {
         dbManager.open();
         cursor = dbManager.fetch(ksn_posId);
         buttonListener();
+
+        String conpropina = cursor.getString(35);
+        String v_tip = formatMoney(cp_tv_tip.getText().toString().replace("$","").replace(",","").replace(" ",""));
+        if (conpropina.equals("0") && (v_tip.contains(" 0.00") || v_tip.contains("$0.00 MXN"))){
+            cp_tv_tip_ll = findViewById(R.id.cp_tv_tip_ll);
+            cp_tv_tip_ll.setVisibility(View.GONE);
+        }
     }
 
     @Override

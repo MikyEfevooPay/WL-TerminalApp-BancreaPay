@@ -71,7 +71,7 @@ public class WMX_Final_CorteCaja_Ticket extends BaseActivity implements View.OnC
     private Context mContext;
     private Button btn_cortecaja_final, btn_cortecaja_reprocesar;
     private TextView txt_totalamount, txt_datetime, txt_subtotal, txt_tip;
-    private LinearLayout lyt_cortecaja_email, lyt_cortecaja_print;
+    private LinearLayout lyt_cortecaja_email, lyt_cortecaja_print, ll_cortecaja_propina;
     private final WMX_llamada_dukpt jsondukpt = new WMX_llamada_dukpt();
     private DBManager dbManager;
     Cursor cursor;
@@ -127,6 +127,12 @@ public class WMX_Final_CorteCaja_Ticket extends BaseActivity implements View.OnC
         dbManager.open();
         cursor = dbManager.fetch(ksn_posId);
         setFetchProgressTitle("Enviando...");
+
+        String conpropina = cursor.getString(35);
+        if (conpropina.equals("0") && (tip.contains(" 0.00") || tip.contains("$0.00 MXN"))){
+            ll_cortecaja_propina = findViewById(R.id.ll_cortecaja_propina);
+            ll_cortecaja_propina.setVisibility(View.GONE);
+        }
     }
 
     @Override

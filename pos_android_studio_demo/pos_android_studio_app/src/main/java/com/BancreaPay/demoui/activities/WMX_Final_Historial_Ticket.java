@@ -38,7 +38,6 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 
 public class WMX_Final_Historial_Ticket extends BaseActivity implements View.OnClickListener {
@@ -47,7 +46,7 @@ public class WMX_Final_Historial_Ticket extends BaseActivity implements View.OnC
     private Context mContext;
     private Button btn_historial_final;
     private TextView txt_totalamount, txt_datetime, txt_subtotal, txt_tip;
-    private LinearLayout lyt_historial_email, lyt_historial_print;
+    private LinearLayout lyt_historial_email, lyt_historial_print,ll_ticket_tip_historial;
     private final WMX_llamada_dukpt jsondukpt = new WMX_llamada_dukpt();
     private DBManager dbManager;
     Cursor cursor;
@@ -90,6 +89,11 @@ public class WMX_Final_Historial_Ticket extends BaseActivity implements View.OnC
         dbManager.open();
         cursor = dbManager.fetch(ksn_posId);
         setFetchProgressTitle("Enviando...");
+        String conpropina = cursor.getString(35);
+        if (conpropina.equals("0") && (tip.contains(" 0.00") || tip.contains("$0.00"))){
+            ll_ticket_tip_historial = findViewById(R.id.ll_ticket_tip_historial);
+            ll_ticket_tip_historial.setVisibility(View.GONE);
+        }
     }
 
     @Override

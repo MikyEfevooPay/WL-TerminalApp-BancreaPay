@@ -65,6 +65,7 @@ public class WMX_final_ticket_transaction extends BaseActivity implements View.O
     private final String TRANSACTION_TICKET_SEND_EMAIL = "transaction_ticket_send_email";
     private boolean isDialogShowing = false;
     private AlertDialog currentDialog = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -212,7 +213,10 @@ public class WMX_final_ticket_transaction extends BaseActivity implements View.O
         } else if (type_transaction.equals(GNTBackEnd.TRANS_VEN_TYPE)) {
             v_tip = thisintent.getStringExtra("v_tip");
             v_subtotal = thisintent.getStringExtra("v_subtotal");
-
+            String conpropina = cursor.getString(35);
+            if (conpropina.equals("0") && (v_tip.contains(" 0.00") || v_tip.contains("$0.00 MXN") )){
+                ticket_ll_propina.setVisibility(View.GONE);
+            }
             ticket_tv_tip_value.setText(v_tip);
             ticket_tv_subtotal_value.setText(v_subtotal);
         } else if (type_transaction.equals(GNTBackEnd.TRANS_CAN_TYPE)) {
@@ -230,6 +234,10 @@ public class WMX_final_ticket_transaction extends BaseActivity implements View.O
                 ticket_ll_propina.setVisibility(View.GONE);
             } else {
                 ticket_tv_title.setText("Resumen de cancelación");
+                String conpropina = cursor.getString(35);
+                if (conpropina.equals("0") && (v_tip.contains(" 0.00") || v_tip.contains("$0.00 MXN") )){
+                    ticket_ll_propina.setVisibility(View.GONE);
+                }
             }
             ticket_tv_tip_value.setText(v_tip);
             ticket_tv_subtotal_value.setText(v_subtotal);
